@@ -76,43 +76,43 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch(v.getId()) {
             case R.id.oneButton:
                 input += "1";
-                updateResult();
+                updateTotal();
                 break;
             case R.id.twoButton:
                 input += "2";
-                updateResult();
+                updateTotal();
                 break;
             case R.id.threeButton:
                 input += "3";
-                updateResult();
+                updateTotal();
                 break;
             case R.id.fourButton:
                 input += "4";
-                updateResult();
+                updateTotal();
                 break;
             case R.id.fiveButton:
                 input += "5";
-                updateResult();
+                updateTotal();
                 break;
             case R.id.sixButton:
                 input += "6";
-                updateResult();
+                updateTotal();
                 break;
             case R.id.sevenButton:
                 input += "7";
-                updateResult();
+                updateTotal();
                 break;
             case R.id.eightButton:
                 input += "8";
-                updateResult();
+                updateTotal();
                 break;
             case R.id.nineButton:
                 input += "9";
-                updateResult();
+                updateTotal();
                 break;
             case R.id.zeroButton:
                 input += "0";
-                updateResult();
+                updateTotal();
                 break;
             case R.id.addButton:
                 input += " + ";
@@ -123,7 +123,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
 
                 updateResult();
-                operandCount--;
+                operandCount = 0;
                 break;
             case R.id.subtractButton:
                 input += " - ";
@@ -165,19 +165,28 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 operandCount = 0;
             case R.id.equalButton:
                 updateResult();
+                operandCount = 0;
                 break;
             default:
                 break;
         }
     }
 
+    void updateTotal() {
+        TextView totalText = findViewById(R.id.calculatorTextView);
+        totalText.setText(input);
+    }
+
     void updateResult() {
         TextView totalText = findViewById(R.id.calculatorTextView);
 
-        System.out.println("Input: " + input);
+        System.out.println("Before Input: " + input);
         double result = parseExpression(input);
         System.out.println("Result: " + result);
         totalText.setText(String.valueOf(result));
+
+        input = Double.toString(result);
+        System.out.println("New input: " + input);
     }
 
     public double parseExpression(String expression) {
