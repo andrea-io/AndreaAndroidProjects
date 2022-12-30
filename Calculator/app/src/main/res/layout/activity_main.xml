@@ -6,13 +6,29 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <TextView
+        android:id="@+id/calculatorTextView"
+        android:layout_width="250dp"
+        android:layout_height="25dp"
+        android:layout_marginBottom="28dp"
+        android:text="@string/total"
+        android:textAlignment="textEnd"
+        app:layout_constraintBottom_toTopOf="@+id/calculatorButtonTableLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.876" />
+
     <TableLayout
+        android:id="@+id/calculatorButtonTableLayout"
         android:layout_width="250dp"
         android:layout_height="324dp"
+        android:layout_marginBottom="112dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent">
 
         <TableRow
             android:layout_width="match_parent"
@@ -24,28 +40,30 @@
                 android:layout_height="60dp"
                 android:background="@drawable/style_top_row_buttons"
 
-                android:text="AC" />
+                android:text="@string/clear" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/plusOrMinusButton"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:background="@drawable/style_top_row_buttons"
-                android:text="+/-" />
+                android:text="@string/plusorminus" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/percentButton"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:background="@drawable/style_top_row_buttons"
-                android:text="%" />
+                android:text="@string/percent" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/divideButton"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:background="@drawable/style_operation_buttons"
-                android:text="/" />
+                android:text="@string/divide"
+                android:textColor="@color/white"
+                tools:ignore="TextContrastCheck" />
         </TableRow>
 
         <TableRow
@@ -57,28 +75,33 @@
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:background="@drawable/style_main_number_pad_buttons"
-                android:text="7" />
+                android:text="@string/seven"
+                android:textColor="@color/white" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/eightButton"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:background="@drawable/style_main_number_pad_buttons"
-                android:text="8" />
+                android:text="@string/eight"
+                android:textColor="@color/white" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/nineButton"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:background="@drawable/style_main_number_pad_buttons"
-                android:text="9" />
+                android:text="@string/nine"
+                android:textColor="@color/white" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/multiplyButton"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:background="@drawable/style_operation_buttons"
-                android:text="X" />
+                android:text="@string/multiply"
+                android:textColor="@color/white"
+                tools:ignore="TextContrastCheck" />
 
         </TableRow>
 
@@ -91,28 +114,33 @@
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:background="@drawable/style_main_number_pad_buttons"
-                android:text="4" />
+                android:text="@string/four"
+                android:textColor="@color/white" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/fiveButton"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:background="@drawable/style_main_number_pad_buttons"
-                android:text="5" />
+                android:text="@string/five"
+                android:textColor="@color/white" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/sixButton"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:background="@drawable/style_main_number_pad_buttons"
-                android:text="6" />
+                android:text="@string/six"
+                android:textColor="@color/white" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/subtractButton"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:background="@drawable/style_operation_buttons"
-                android:text="-" />
+                android:text="@string/subtract"
+                android:textColor="@color/white"
+                tools:ignore="TextContrastCheck" />
         </TableRow>
 
         <TableRow
@@ -124,28 +152,33 @@
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:background="@drawable/style_main_number_pad_buttons"
-                android:text="1" />
+                android:text="@string/one"
+                android:textColor="@color/white" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/twoButton"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:background="@drawable/style_main_number_pad_buttons"
-                android:text="2" />
+                android:text="@string/two"
+                android:textColor="@color/white" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/threeButton"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:background="@drawable/style_main_number_pad_buttons"
-                android:text="3" />
+                android:text="@string/three"
+                android:textColor="@color/white" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/addButon"
+                android:id="@+id/addButton"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:background="@drawable/style_operation_buttons"
-                android:text="+" />
+                android:text="@string/plus"
+                android:textColor="@color/white"
+                tools:ignore="TextContrastCheck" />
         </TableRow>
 
         <TableRow
@@ -157,21 +190,25 @@
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:background="@drawable/style_main_number_pad_buttons"
-                android:text="0" />
+                android:text="@string/zero"
+                android:textColor="@color/white" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/decimalButton"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                android:background="@drawable/style_top_row_buttons"
-                android:text="." />
+                android:background="@drawable/style_main_number_pad_buttons"
+                android:text="@string/decimal"
+                android:textColor="@color/white" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/equalButton"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                android:background="@drawable/style_top_row_buttons"
-                android:text="=" />
+                android:background="@drawable/style_operation_buttons"
+                android:text="@string/equal"
+                android:textColor="@color/white"
+                tools:ignore="TextContrastCheck" />
         </TableRow>
     </TableLayout>
 
