@@ -6,13 +6,173 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+    <TableLayout
+        android:layout_width="250dp"
+        android:layout_height="324dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/clearButton"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/style_top_row_buttons"
+
+                android:text="AC" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/plusOrMinusButton"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/style_top_row_buttons"
+                android:text="+/-" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/percentButton"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/style_top_row_buttons"
+                android:text="%" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/divideButton"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/style_operation_buttons"
+                android:text="/" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/sevenButton"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/style_main_number_pad_buttons"
+                android:text="7" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/eightButton"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/style_main_number_pad_buttons"
+                android:text="8" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/nineButton"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/style_main_number_pad_buttons"
+                android:text="9" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/multiplyButton"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/style_operation_buttons"
+                android:text="X" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/fourButton"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/style_main_number_pad_buttons"
+                android:text="4" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/fiveButton"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/style_main_number_pad_buttons"
+                android:text="5" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/sixButton"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/style_main_number_pad_buttons"
+                android:text="6" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/subtractButton"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/style_operation_buttons"
+                android:text="-" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/oneButton"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/style_main_number_pad_buttons"
+                android:text="1" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/twoButton"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/style_main_number_pad_buttons"
+                android:text="2" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/threeButton"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/style_main_number_pad_buttons"
+                android:text="3" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/addButon"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/style_operation_buttons"
+                android:text="+" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/zeroButton"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/style_main_number_pad_buttons"
+                android:text="0" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/decimalButton"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/style_top_row_buttons"
+                android:text="." />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/equalButton"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/style_top_row_buttons"
+                android:text="=" />
+        </TableRow>
+    </TableLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
