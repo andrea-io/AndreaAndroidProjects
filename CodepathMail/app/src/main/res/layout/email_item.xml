@@ -1,0 +1,66 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/summaryTv"
+        android:layout_width="284dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="1dp"
+        android:padding="5dp"
+        android:textSize="10sp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        app:layout_constraintStart_toEndOf="@+id/avatarIv"
+        app:layout_constraintTop_toBottomOf="@+id/titleTv"
+        tools:text="Have you been able to finish the latest assignment? I'm stuck on the 3rd step and don't quite know what's wrong." />
+
+    <TextView
+        android:id="@+id/senderTv"
+        android:layout_width="212dp"
+        android:layout_height="23dp"
+        android:padding="5dp"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/avatarIv"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Hedwig" />
+
+    <TextView
+        android:id="@+id/titleTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/avatarIv"
+        app:layout_constraintTop_toBottomOf="@+id/senderTv"
+        tools:text="Help on Assignment #2" />
+
+    <TextView
+        android:id="@+id/dateTv"
+        android:layout_width="59dp"
+        android:layout_height="25dp"
+        android:layout_marginBottom="24dp"
+        android:padding="5dp"
+        android:textAlignment="viewEnd"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/summaryTv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/senderTv"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="March 2" />
+
+    <ImageView
+        android:id="@+id/avatarIv"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/placeholder_avatar"  />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
